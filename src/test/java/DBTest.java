@@ -8,7 +8,7 @@ import page.LoginPage;
 import page.PersonalAccountPage;
 import page.VerificationPage;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DBTest {
 
@@ -46,6 +46,6 @@ public class DBTest {
 
         loginPage.login(DataHelper.getUserSecondLogin(),DataHelper.generatePassword());
 
-        loginPage.getErrorMsg("Ошибка!");
+        loginPage.getErrorMsg("Система заблокирована. Попробуйте позже.");
     }
 }
